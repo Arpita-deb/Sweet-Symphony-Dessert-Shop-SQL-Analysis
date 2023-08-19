@@ -1,6 +1,6 @@
 ﻿/* 
 In this section of the code, I've used Data Querying Language (DQL) to get answers of some basic questions from this dataset.
-I've used Aggregating functions (SUM, COUNT, MAX, MIN and AVG) and logical operators (AND, OR, BETWEEN, IN, DISTINCT, LIKE) for basic calculations,
+I've used Aggregating functions (SUM, COUNT, MAX, MIN and AVG) and logical operators (AND, OR, BETWEEN, IN,NOT IN, DISTINCT, LIKE) for basic calculations,
 Filtered rows with the help of WHERE, GROUP BY, ORDER BY, IN, BETWEEN, TOP 5 clauses and Wildcard functions,
 Joined strings together with CONCAT FUNCTION, and used AS clause to create aliases, used JOINS to get informations from two tables 
 and used DATEADD and DATEDIFF for calculations with date.
@@ -31,7 +31,6 @@ ORDER BY UnitPrice
 SELECT DISTINCT CategoryName
 FROM Products
 
-
 -- What is the average unit price of Sweet Symphony desserts?
 SELECT ROUND(AVG(UnitPrice),2)
 FROM Products
@@ -56,7 +55,7 @@ WHERE [UnitPrice]=2.15
 SELECT [ProductName],
        [QuantitySold],
        [UnitPrice],
-	   [UnitPrice]*[QuantitySold] AS Total_price
+       [UnitPrice]*[QuantitySold] AS Total_price
 FROM Products
 ORDER BY Total_price DESC
  
@@ -66,13 +65,13 @@ FROM Products
 
 -- What are the top 5 most profitable products?
 SELECT TOP 5 [ProductName],
-	         [UnitPrice]*[QuantitySold] AS Total_Price
+       [UnitPrice]*[QuantitySold] AS Total_Price
 FROM Products
 ORDER BY Total_Price DESC
 
 -- What are the least profitable products?
 SELECT TOP 5 [ProductName],
-	   [UnitPrice]*[QuantitySold] AS Total_Price
+       [UnitPrice]*[QuantitySold] AS Total_Price
 FROM Products
 ORDER BY Total_Price
 
@@ -107,8 +106,8 @@ SELECT * FROM Orders WHERE (OrderDate >= '2023/07/01') AND [ShipCity]='Portland'
 SELECT [EmployeeID], 
         CONCAT([FirstName], ' ',[LastName]) AS EmployeeName,
         [Address],
-		[City],
-		[Country]
+	[City],
+	[Country]
 FROM EmployeeDetails
 
 -- Join Customers and Orders table 
@@ -116,9 +115,9 @@ FROM EmployeeDetails
 SELECT c.[ContactName],
        o.[OrderDate],
        o.[ShipAddress],
-	   o.[ShipCity],
-	   o.[ShipPostalCode],
-	   c.[Phone]
+       o.[ShipCity],
+       o.[ShipPostalCode],
+       c.[Phone]
 FROM [dbo].[Customers] c JOIN [dbo].[Orders] o
 ON c.[CustomerID]=o.[CustomerID]
 ORDER BY OrderDate
@@ -133,9 +132,9 @@ GROUP BY CustomerID
 SELECT p.ProductName,
        p.UnitPrice,
        p.CategoryName, 
-	   o.OrderID, 
-	   o.QuantityOrdered,
-	   o.OrderDate
+       o.OrderID, 
+       o.QuantityOrdered,
+       o.OrderDate
 FROM [dbo].[Products] p LEFT JOIN [dbo].[Orders] o
 ON p.[ProductID]=o.[ProductID]
 ORDER BY OrderDate
@@ -152,12 +151,12 @@ SELECT [OrderID],
        [ShipAddress],
        [ShipCity],
        [ShipPostalCode],
-	   DATEADD (ww, 1,[OrderDate] ) AS 'Requirred Date'
+       DATEADD (ww, 1,[OrderDate] ) AS 'Requirred Date'
 FROM Orders WHERE CustomerID='HS001' AND OrderID IN (1,2,4,5)
 	
 -- Calculate the difference of days between OrderDate and ShippedDate
 SELECT [OrderID],
        [OrderDate],
        [ShippedDate],
-	   DATEDIFF (dd, [OrderDate], [ShippedDate]) AS 'Difference of days'
+       DATEDIFF (dd, [OrderDate], [ShippedDate]) AS 'Difference of days'
 FROM [dbo].[Orders]
