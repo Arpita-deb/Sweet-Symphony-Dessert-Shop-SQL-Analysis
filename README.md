@@ -1,13 +1,13 @@
 # Sweet Symphony Dessert Shop Analysis in SQL
 
 ## Introduction:
-Sweet Symphony Desserts Shop is a fictional family owned business known for their variety of desserts and confectionaries. The database contains 5 tables that manages their products, product categories, employee details, customers and order details. The product table shows products sold in first 6 months of opening, the order details shows information for two months only to keep the code simple and clean.
+Sweet Symphony Desserts Shop is a fictional family owned business known for their variety of desserts and confectionaries. The database contains 5 tables that manages their products, product categories, employee details, customers and order details. 
 
 ## Tool used:
 This project is done in Microsoft SQL Server and SQL Server Management Studio(SSMS).
 
 ## Project Overview:
-In this project a database with 5 tables of a fictional dessert shop has been created using SQL CRUD Statements and different Data Manipulation Languages (DML). CRUD stands for CREATE, READ, UPDATE and DELETE that refers to major operations on databases. Each letter in the acronym can be mapped to SQL operational clauses.
+In this project a database with 5 tables of a fictional dessert shop has been created using SQL CRUD Statements and different Data Manipulation Languages (DML). **CRUD** stands for **CREATE, READ, UPDATE** and **DELETE** that refers to major operations on databases. Each letter in the acronym can be mapped to SQL operational clauses.
 
 | CRUD statements | SQL Clauses |
 | :-- | :-- |
@@ -16,17 +16,20 @@ In this project a database with 5 tables of a fictional dessert shop has been cr
 | update | UPDATE |
 | delete | DROP |
 
-A data manipulation language (DML) is a family of computer languages permits users to manipulate data in a database by inserting data into database tables, retrieving existing data, deleting data from existing tables and modifying existing data. 
-
 The project is divided into 3 parts-
 1. Creating the Tables using CREATE, ALTER and DROP Clauses
 2. Inserting Values and updating them with INSERT INTO, SELECT, UPDATE, ALTER, DELETE FROM Clauses
 3. Using Data Query Language (DQL) answer some basic questions about the data
 
-
+# Analysis
 ## Part 1: Creating the Tables
 
-5 tables namely Categories, EmployeeDetails, Customers, Products and Orders have been created using CREATE Clause. Here only 2 tables have been shown created. These tables conjointly contain informations about the products Sweet Symphony sold in the first 6 months of their opening, details of employees working there, categories of products sold, informations about the customers and order details of first 2 months.
+In this part a Database named **Sweet Symphony Desserts Shop** and 5 tables have been created. The following Data Definition Language (DDL) commands were used-
+* CREATE    -  to create the database and the tables
+* DROP      -  to delete/remove the database objects from the SQL database
+* ALTER     - to change or modifie the existing structure of the database
+
+Here only 2 tables have been shown created.
 
 ![Screenshot (452)](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/9c5843dd-cac9-4290-acc7-538911d0a235)
 
@@ -34,23 +37,23 @@ The project is divided into 3 parts-
 
 ### **Tables Created**
 
-* Categories table
+* Categories table - individual products are grouped into 8 categories. 
 
    ![cat](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/a446bac2-4877-4461-9c86-e57b2a58003f)
   
-* Customers table 
+* Customers table - customers who have ordered products from Sweet Symphony.
 
    ![cust](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/3572de45-a6cf-4844-ac68-c5478226f4f8)
   
-* EmployeeDetails table
+* EmployeeDetails table - employees who work for Sweet Symphony.
 
   ![employee table](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/9cfbf668-ecb8-456c-b18d-ce137eff0520)
   
-* Product table
+* Products table - The details of products which Sweet Symphony sold in their first 6 months of opening.
 
    ![pdt](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/f2f3411f-dd84-450b-b50f-0ab4d9fc2010)
   
-* Orders table
+* Orders table - Order details from the first 2 months of opening.
 
   ![order](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/f4b1147e-4ca0-45c5-b80b-dbef1193f8bb)
 
@@ -58,11 +61,34 @@ This database design shows all the tables and connections between them. As can b
 
 <img src="https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/44ffb574-fbb4-4753-a7dc-dc0280248f4d" width=750 height=500>
 
-## Part 2: Inserting Values and updating them
-In this 
+## Part 2: Inserting Values and updating them 
+
+**Data manipulation language (DML)** is a family of computer languages that permits users to manipulate data in a database by inserting data into database tables, retrieving existing data, deleting data from existing tables and modifying existing data. The following DML commands are used- 
+* SELECT   - to show the records of the specified table
+* INSERT   - to insert data in database tables.
+* UPDATE   - to update or modify the existing data in database tables 
+* DELETE   - to remove single or multiple existing records from the database tables.
+  
 ![Screenshot (457)](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/1f6f77a9-e478-4df4-a430-0370ea1f907b)
 
 ## Part 3: Using SQL answer some basic questions about the data
+
+The following clauses and functions were used to obtain various informations from the tables.
+   * WHERE         - to filter data of interest
+   * GROUP BY      - to group rows that have the same values into summary rows
+   * ORDER BY      - to sort the data in ascending or descending order
+   * CONCAT        - to  add two or more strings together
+   * DATEDIFF      - to return the difference between two date values
+   * DATEADD       - to add a date to another date, then return the new date
+   * JOIN          - to combine rows from two or more tables, based on a related column between them
+   * BETWEEN       - to filter values in a range
+   * MAX           - to obtain the maximum value of a numeric column
+   * MIN           - to obtain the minimum value of a numeric column
+   * COUNT         - to return the number of rows that matches a specified criterion
+   * SUM           - to return the total sum of a numeric column.
+   * AVG           - to get average value of a numeric column.
+   * LIKE          - used to search for a specified pattern in a column.
+   * IN            - to specify multiple values in a WHERE clause
    
 * How many categories of product do they sell?
   
@@ -140,6 +166,10 @@ In this
 
 ## Conclusion:
 
+* A Database named **Sweet Symphony Desserts Shop** is created in Microsoft SQL Server.
+* With the help of **CREATE, ALTER, DROP** caluses 5 tables have been created and altered.
+* Values have been inserted into the tables using **INSERT INTO, SELECT, UPDATE, ALTER** and **DELETE FROM** Clauses
+* Various informations have been obtained using **SELECT** statement.
 
 ## References:
 
@@ -154,4 +184,3 @@ In this
 * [DATEADD Function in SQL](https://www.w3schools.com/SQl/func_sqlserver_dateadd.asp)
 * [SQL Wildcard Characters](https://www.w3schools.com/SQl/sql_wildcards.asp)
 * [Types of SQL Joins](https://www.javatpoint.com/types-of-sql-join)
-
