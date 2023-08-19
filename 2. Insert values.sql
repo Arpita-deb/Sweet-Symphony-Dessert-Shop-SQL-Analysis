@@ -22,6 +22,7 @@ VALUES (106, 'Icecream'),
 -- Showing all the values from Categories table
 SELECT * FROM Categories
 
+  
 -- Employees table
 INSERT INTO EmployeeDetails
 VALUES ('ANSS01', 'Andrew','Fuller','507-20th Ave.','Seattle','USA','(503) 555-8097'),
@@ -52,7 +53,6 @@ WHERE EmployeeID='RWSS05'
 
 
 -- Product Table
--- The product table gives the details of products sold in first 6 months of opening the shop
 INSERT INTO Products
 VALUES ( 001, 'Swiss Roll', 'Cake', 100, 15.00),
 ( 002, 'Red Velvet Cake', 'Cake', 153, 10.70),
@@ -88,6 +88,7 @@ VALUES ( 015, 'Sundae', 'Ice cream', 100, 8.00),
 ( 030, 'Saltwater Taffy', 'Confectionery and Candies',316, 2.15)
 
 -- The column name QuantityPerUnit in Product table is changed to QuantitySold
+  
 -- Showing all the values from Product table
 SELECT * FROM Products
 
@@ -95,6 +96,7 @@ SELECT * FROM Products
 SELECT * FROM Products 
 ORDER BY CategoryName
 
+  
 -- Customer table
 INSERT INTO Customers
 VALUES('HS001', 'Howard Snyder','2732 Baker Blvd.','Eugene','97403','USA','(503) 555-7555'),
@@ -117,8 +119,8 @@ VALUES ('AD004', 'Anne Dodsworth','4110 Old Redmond Rd.','Redmond','98052','USA'
 ('AS007', 'Andrew Scott','908 W. Capital Way','Tacoma','98401','USA','(206) 555-9482'),
 ('JF008', 'James Francis','507 - 20th Ave.','Seattle','98122','USA','(206) 555-9857')
 
-
 SELECT * FROM Customers
+
 
 --Inserting a new column in Orders table called QuantityOrdered
 ALTER TABLE Orders 
@@ -162,7 +164,6 @@ VALUES (1,'HS001', '1', '20230612', '20230612', '2732 Baker Blvd.', 'Eugene','97
 (34,'PW005', '18', '20230717', '20230717', '2817 Milton Dr.', 'Albuquerque','87110', 4),
 (35,'PW005', '14', '20230718', '20230718', '2817 Milton Dr.', 'Albuquerque','87110', 4)
 
-
 -- Updating the information in Orders table where the customers were from Anchorage, Albuquerque and Lander
 -- and changing them to customers from Redmond, Kirkland and Tacoma
 UPDATE Orders
@@ -176,10 +177,12 @@ WHERE OrderID=15
 UPDATE Orders
 SET CustomerID='NP005', ShipAddress='722 Moss Bay Blvd.',  ShipCity='Kirkland', ShipPostalCode='98033'
 WHERE OrderID IN (30,34, 35)
+
 UPDATE Orders
 SET CustomerID='AS007', ShipAddress='908 W. Capital Way',  ShipCity='Tacoma', ShipPostalCode='98401'
 WHERE OrderID IN (29,31,32)
 
+-- Changing ShippedDate for OrderID 27, 7 and 8
 UPDATE Orders
 SET ShippedDate='20230704'
 WHERE OrderID=27
