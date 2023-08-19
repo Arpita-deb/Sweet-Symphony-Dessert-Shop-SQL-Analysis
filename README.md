@@ -1,13 +1,10 @@
 # Sweet Symphony Dessert Shop Analysis in SQL
 
 ## Introduction:
-
+Sweet Symphony Desserts Shop is a fictional family owned business known for their variety of desserts and confectionaries. The database contains 5 tables that manages their products, product categories, employee details, customers and order details. The product table shows products sold in first 6 months of opening, the order details shows information for two months only to keep the code simple and clean.
 
 ## Tool used:
 This project is done in Microsoft SQL Server and SQL Server Management Studio(SSMS).
-
-## About the data:
-![database design](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/44ffb574-fbb4-4753-a7dc-dc0280248f4d)
 
 ## Project Overview:
 In this project a database with 5 tables of a fictional dessert shop has been created using SQL CRUD Statements and different Data Manipulation Languages (DML). CRUD stands for CREATE, READ, UPDATE and DELETE that refers to major operations on databases. Each letter in the acronym can be mapped to SQL operational clauses.
@@ -29,12 +26,43 @@ The project is divided into 3 parts-
 
 ## Part 1: Creating the Tables
 
-5 tables namely Categories, EmployeeDetails, Customers, Products and Orders have been created using CREATE Clause. These tables conjointly contain informations about the products Sweet Symphony sold in the first 6 months of their opening, details of employees working there, categories of products sold, informations about the customers and order details of first 2 months.
+5 tables namely Categories, EmployeeDetails, Customers, Products and Orders have been created using CREATE Clause. Here only 2 tables have been shown created. These tables conjointly contain informations about the products Sweet Symphony sold in the first 6 months of their opening, details of employees working there, categories of products sold, informations about the customers and order details of first 2 months.
 
+![Screenshot (452)](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/9c5843dd-cac9-4290-acc7-538911d0a235)
 
-## Inserting Values and updating them:
+![Screenshot (451)](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/c61c64d9-4db5-4558-a6d7-e8e32899b7d0)
 
-## Using SQL answer some basic questions about the data:
+### **Tables Created**
+
+* Categories table
+
+   ![cat](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/a446bac2-4877-4461-9c86-e57b2a58003f)
+  
+* Customers table 
+
+   ![cust](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/3572de45-a6cf-4844-ac68-c5478226f4f8)
+  
+* EmployeeDetails table
+
+  ![employee table](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/9cfbf668-ecb8-456c-b18d-ce137eff0520)
+  
+* Product table
+
+   ![pdt](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/f2f3411f-dd84-450b-b50f-0ab4d9fc2010)
+  
+* Orders table
+
+  ![order](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/f4b1147e-4ca0-45c5-b80b-dbef1193f8bb)
+
+This database design shows all the tables and connections between them. As can be seen from the image, only Orders and Customers tables are joined together with the help of Foreign key (CustomerID). Each table has individual Primary key and datatypes of the columns defined.
+
+<img src="https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/44ffb574-fbb4-4753-a7dc-dc0280248f4d" width=750 height=500>
+
+## Part 2: Inserting Values and updating them
+In this 
+![Screenshot (457)](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/1f6f77a9-e478-4df4-a430-0370ea1f907b)
+
+## Part 3: Using SQL answer some basic questions about the data
    
 * How many categories of product do they sell?
   
@@ -110,11 +138,11 @@ The project is divided into 3 parts-
   
   ![join 2](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/2085d173-f4c2-4d42-aefe-8e330a1e5f7b)
 
-
-
 ## Conclusion:
 
+
 ## References:
+
 * [Data Definition Language (DDL)](https://en.wikipedia.org/wiki/Data_definition_language)
 * [Data Manipulation Language (DML)](https://www.javatpoint.com/dml-commands-in-sql)
 * [Data Query Language (DQL)](https://en.wikipedia.org/wiki/Data_query_language)
