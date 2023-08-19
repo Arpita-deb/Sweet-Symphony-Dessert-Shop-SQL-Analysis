@@ -97,7 +97,7 @@ SELECT * FROM EmployeeDetails WHERE City='Seattle'
 -- Show the employees whose lastname consists of 'er'
 SELECT * FROM EmployeeDetails WHERE [LastName] LIKE '%er%'
 
---Select the rows of all employees that have ‘a’ as the fifth letter in their names
+-- Select the rows of all employees that have ‘a’ as the fifth letter in their names
 SELECT * FROM EmployeeDetails WHERE [FirstName] LIKE '____a'
 
 -- Orders from Portland in the month of July
@@ -123,7 +123,7 @@ FROM [dbo].[Customers] c JOIN [dbo].[Orders] o
 ON c.[CustomerID]=o.[CustomerID]
 ORDER BY OrderDate
 
--- Shows the number of orders for each customer
+-- Show the number of orders for each customer
 SELECT CustomerID, COUNT(OrderID) AS Number_of_Orders
 FROM Orders
 GROUP BY CustomerID
@@ -139,17 +139,9 @@ SELECT p.ProductName,
 FROM [dbo].[Products] p LEFT JOIN [dbo].[Orders] o
 ON p.[ProductID]=o.[ProductID]
 ORDER BY OrderDate
-
--- Calculating difference of days between OrderDate and ShippedDate
-SELECT [OrderID],
-       [OrderDate],
-       [ShippedDate],
-	   DATEDIFF (dd, [OrderDate], [ShippedDate]) AS 'Difference of days'
-FROM [dbo].[Orders]
 	 
 -- The customer from Eugene, Oregon ordered some desserts from Sweet Symphony which they want a week later.
 -- Update the shippeddate to a week after and add a required date column
-
 UPDATE Orders
 SET [ShippedDate] ='20230619'
 WHERE [OrderID] IN (1,2,4,5)
@@ -162,5 +154,10 @@ SELECT [OrderID],
        [ShipPostalCode],
 	   DATEADD (ww, 1,[OrderDate] ) AS 'Requirred Date'
 FROM Orders WHERE CustomerID='HS001' AND OrderID IN (1,2,4,5)
-
-SELECT * FROM Orders WHERE [ShipCity]='Eugene'
+	
+-- Calculate the difference of days between OrderDate and ShippedDate
+SELECT [OrderID],
+       [OrderDate],
+       [ShippedDate],
+	   DATEDIFF (dd, [OrderDate], [ShippedDate]) AS 'Difference of days'
+FROM [dbo].[Orders]
