@@ -1,21 +1,40 @@
 # Sweet Symphony Dessert Shop Analysis in SQL
 
-## Introduction: 
-An analysis of a fictional dessert shop using Structured Query Language (SQL). Applied CRUD clauses to create, read, update and delete tables, rows and columns and using Data Manipulation Language answered various question regarding the dataset.
+## Introduction:
+
 
 ## Tool used:
-
 This project is done in Microsoft SQL Server and SQL Server Management Studio(SSMS).
 
 ## About the data:
 ![database design](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/44ffb574-fbb4-4753-a7dc-dc0280248f4d)
-A database Sweet Symphony Dessert Shop has been created in SQL Server Management Studio(SSMS). 5 tables namely Categories, EmployeeDetails, Customers, Products and Orders have been created using CREATE Clause. These tables conjointly contain informations about the products Sweet Symphony sold in the first 6 months of their opening, details of employees working there, categories of products sold, informations about the customers and order details of first 2 months.
 
-## Analysis: 
+## Project Overview:
+In this project a database with 5 tables of a fictional dessert shop has been created using SQL CRUD Statements and different Data Manipulation Languages (DML). CRUD stands for CREATE, READ, UPDATE and DELETE that refers to major operations on databases. Each letter in the acronym can be mapped to SQL operational clauses.
 
-1. Creating the Tables:
-2. Inserting Values and updating them:
-3. Using SQL answer some basic questions about the data:
+| CRUD statements | SQL Clauses |
+| :-- | :-- |
+|create | CREATE |
+| read | SELECT |
+| update | UPDATE |
+| delete | DROP |
+
+A data manipulation language (DML) is a family of computer languages permits users to manipulate data in a database by inserting data into database tables, retrieving existing data, deleting data from existing tables and modifying existing data. 
+
+The project is divided into 3 parts-
+1. Creating the Tables using CREATE, ALTER and DROP Clauses
+2. Inserting Values and updating them with INSERT INTO, SELECT, UPDATE, ALTER, DELETE FROM Clauses
+3. Using Data Query Language (DQL) answer some basic questions about the data
+
+
+## Part 1: Creating the Tables
+
+5 tables namely Categories, EmployeeDetails, Customers, Products and Orders have been created using CREATE Clause. These tables conjointly contain informations about the products Sweet Symphony sold in the first 6 months of their opening, details of employees working there, categories of products sold, informations about the customers and order details of first 2 months.
+
+
+## Inserting Values and updating them:
+
+## Using SQL answer some basic questions about the data:
    
 * How many categories of product do they sell?
   
@@ -87,14 +106,24 @@ A database Sweet Symphony Dessert Shop has been created in SQL Server Management
    
   ![join 1](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/080b6e1d-f661-4e38-b348-a13a54020628)
 
-* Join product and order table  and show the product name, category, unitprice, order Id and quantity ordered
+* Join products and orders table  and show the product name, category, unitprice, order Id and quantity ordered
   
-![join 2](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/2085d173-f4c2-4d42-aefe-8e330a1e5f7b)
+  ![join 2](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/2085d173-f4c2-4d42-aefe-8e330a1e5f7b)
 
 
 
 ## Conclusion:
 
 ## References:
-
+* [Data Definition Language (DDL)](https://en.wikipedia.org/wiki/Data_definition_language)
+* [Data Manipulation Language (DML)](https://www.javatpoint.com/dml-commands-in-sql)
+* [Data Query Language (DQL)](https://en.wikipedia.org/wiki/Data_query_language)
+* [Crud Operations in SQL](https://www.javatpoint.com/crud-operations-in-sql)
+* [Primary Key](https://www.w3schools.com/sql/sql_primarykey.asp)
+* [Foreign Key](https://www.w3schools.com/sql/sql_foreignkey.asp)
+* [CONCAT Function in SQL](https://www.javatpoint.com/concat-function-in-sql)
+* [DATEDIFF Function in SQL](https://www.w3schools.com/SQl/func_sqlserver_datediff.asp)
+* [DATEADD Function in SQL](https://www.w3schools.com/SQl/func_sqlserver_dateadd.asp)
+* [SQL Wildcard Characters](https://www.w3schools.com/SQl/sql_wildcards.asp)
+* [Types of SQL Joins](https://www.javatpoint.com/types-of-sql-join)
 
