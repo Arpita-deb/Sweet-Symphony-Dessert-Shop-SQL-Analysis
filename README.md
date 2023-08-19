@@ -68,7 +68,8 @@ A database Sweet Symphony Dessert Shop has been created in SQL Server Management
   ![wildcrd](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/20233725-59b5-493b-910e-b7a6c4524a48)
   
 * Show the number of orders for each customer.
-  
+
+  ![no of order ](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/2ab22291-8674-4dcd-ad64-7dde076718a0)
   
 * Show the orders from Portland in the month of July.
   
@@ -76,10 +77,18 @@ A database Sweet Symphony Dessert Shop has been created in SQL Server Management
 
 * The customer from Eugene, Oregon ordered some desserts from Sweet Symphony which they want a week later. Update the shippeddate to a week after and add a required date column.
 
-* Calculate the difference of days between OrderDate and ShippedData.
-  
-![join 1](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/080b6e1d-f661-4e38-b348-a13a54020628)
+  ![eugene join](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/6fc897bd-6ec1-404d-9bf0-f965fcd824c0)
 
+* Calculate the difference of days between OrderDate and ShippedData.
+
+  ![diff days](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/5de3fd34-4ffa-4429-87d8-e89da0e0c1c5)
+
+* Show the customer details who ordered products from Sweet Symphony.
+   
+  ![join 1](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/080b6e1d-f661-4e38-b348-a13a54020628)
+
+* Join product and order table  and show the product name, category, unitprice, order Id and quantity ordered
+  
 ![join 2](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/2085d173-f4c2-4d42-aefe-8e330a1e5f7b)
 
 
