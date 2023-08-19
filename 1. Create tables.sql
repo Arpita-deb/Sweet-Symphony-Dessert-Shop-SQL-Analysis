@@ -8,15 +8,14 @@ In this section, I've used Data Definition Language(DDL) to Create, Alter and Dr
 -- setting the dateformat as day-month-year
 SET DATEFORMAT DMY
 
-/* Creating Categories table */
-
+-- Creating Categories table 
 CREATE TABLE [dbo].[Categories] (
 [CategoryID] INT NOT NULL,
 [CategoryName] CHAR(60) NOT NULL,
 PRIMARY KEY(CategoryID)
+)
 
-/* Creating Products table */
-
+-- Creating Products table 
 CREATE TABLE [dbo].[Products](
 [ProductId] INT NOT NULL,
 [ProductName] VARCHAR(30) NOT NULL,
@@ -24,10 +23,10 @@ CREATE TABLE [dbo].[Products](
 [QuantityPerUnit] SMALLINT NULL,
 [UnitPrice] MONEY NULL,
 PRIMARY KEY(ProductId)
-
--- Renamed the QuantityPerUnit column to QuantitySold as it is more appropriate, 
---since the table shows the business's sale for the first week of opening.
-
+)
+  
+-- Renamed the QuantityPerUnit column to QuantitySold as it is more appropriate.
+  
 -- Creating a status table
 CREATE TABLE [dbo].[Status](
 [OrderID] INT NOT NULL,
@@ -39,8 +38,7 @@ CREATE TABLE [dbo].[Status](
 -- Since the tables doesn't contain large data points, the Status table is not required now. So I'll delete this table for time being.
 DROP TABLE Status
 
-/* Creating a new table EmployeeDetails */
-
+-- Creating EmployeeDetails Table
 CREATE TABLE [dbo].[EmployeeDetails](
 [EmployeeID] VARCHAR(6) NOT NULL,
 [FirstName] VARCHAR(20) NOT NULL,
@@ -50,14 +48,14 @@ CREATE TABLE [dbo].[EmployeeDetails](
 [Country] VARCHAR(15) NULL,
 [Phone] VARCHAR(10) NULL,
 PRIMARY KEY (EmployeeID)
-
+)
+  
 -- Changing the length of characters for Phone column
 ALTER TABLE EmployeeDetails
 ALTER COLUMN [Phone] VARCHAR(15) 
 
-/* Creating customerdetails table*/
-
-CREATE TABLE [dbo].[CustomerDetails](
+-- Creating Customers table
+CREATE TABLE [dbo].[Customers](
 [CustomerID] NCHAR(5) NOT NULL,
 [ContactName] VARCHAR(30) NULL,
 [Address] VARCHAR(60) NULL,
@@ -66,9 +64,9 @@ CREATE TABLE [dbo].[CustomerDetails](
 [Country] VARCHAR(15) NULL,
 [Phone] VARCHAR(15) NULL,
 PRIMARY KEY(CustomerID)
-
-/*Creating Orders table*/
-
+)
+  
+-- Creating Orders table
 CREATE TABLE [dbo].[Orders] (
 [OrderID] INT NOT NULL,
 [CustomerID] NCHAR(5) NOT NULL,
@@ -78,15 +76,17 @@ CREATE TABLE [dbo].[Orders] (
 [ShipAddress] VARCHAR(60) NULL,
 [ShipCity] VARCHAR(15) NULL,
 [ShipPostalCode] VARCHAR(15) NULL,
-PRIMARY KEY CLUSTERED(OrderId)
-
+PRIMARY KEY (OrderId)
+)
+  
+-- Changing the OrderDate and ShippedDate datatype from DATE to DATETIME2
 ALTER TABLE Orders
 ALTER COLUMN [OrderDate] DATETIME2
 
 ALTER TABLE Orders
 ALTER COLUMN [ShippedDate]  DATETIME2
-
+  
+-- Adding a Foreign Key (CustomerID) to the Orders table
 ALTER TABLE Orders
 ADD CONSTRAINT fk1 FOREIGN KEY(CustomerID) REFERENCES
 Customers(CustomerID) 
-
