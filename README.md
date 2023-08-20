@@ -55,6 +55,10 @@ Here only 2 tables have been shown created.
   
 * Orders table - Order details from the first 2 months of opening.
 
+![order](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/f4b1147e-4ca0-45c5-b80b-dbef1193f8bb)
+<br><br>
+
+![Screenshot (469)](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/44329106-1f01-4265-a5d1-91604691ea03)
  
 As can be seen from the database design diagram only Orders and Customers tables are joined together with the help of a Foreign key (CustomerID). Each table has individual Primary key and datatypes of the columns defined.
 
@@ -176,9 +180,9 @@ The following clauses and functions were used to obtain various information from
 
 * Show the customer details who ordered products from Sweet Symphony.
 
-   ![11A](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/e194c827-591e-4b89-9bbd-e6a5834cb364)
-
    ![11C](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/680b2a61-a2a1-4c9e-ae24-ebc5ba06c715)
+
+   ![11A](https://github.com/Arpita-deb/Sweet-Symphony-Dessert-Shop-SQL-Analysis/assets/139372731/e194c827-591e-4b89-9bbd-e6a5834cb364)
 
 ## Conclusion:
 
