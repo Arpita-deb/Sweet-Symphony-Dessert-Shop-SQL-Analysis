@@ -167,9 +167,11 @@ The following clauses and functions were used to obtain various informations fro
 ## Conclusion:
 
 * A Database named **Sweet Symphony Desserts Shop** is created in Microsoft SQL Server.
-* With the help of **CREATE, ALTER, DROP** caluses 5 tables have been created and altered.
+* With the help of **CREATE, ALTER, DROP** clauses 5 tables have been created and altered.
 * Values have been inserted into the tables using **INSERT INTO, SELECT, UPDATE, ALTER** and **DELETE FROM** Clauses
-* Various informations have been obtained using **SELECT** statement.
+* Various information has been obtained using **SELECT** statement.
+* Use of **WHERE, GROUP BY, ORDER BY** clauses have been shown.
+* Different **aggregate functions** have been used to obtain the sum, average, maximum and minimum of numerical data points.
 
 ## References:
 
