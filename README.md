@@ -1,4 +1,5 @@
 # Sweet Symphony Dessert Shop Analysis in SQL
+## Database Design Project: Building a database from scratch
 
 ## Introduction:
 Sweet Symphony Desserts Shop is a fictional family owned business known for their variety of desserts and confectionaries. The database contains 5 tables that manages their products, product categories, employee details, customers and order details. 
