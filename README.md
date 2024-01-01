@@ -194,6 +194,11 @@ The following clauses and functions were used to obtain various information from
 * Use of **WHERE, GROUP BY, ORDER BY** clauses have been shown.
 * Different **aggregate functions** have been used to obtain the sum, average, maximum and minimum of numerical data points.
 
+## Limitations:
+
+* The major limitation of this project is that it is not normalized.
+* The dataset is very small to perform complex analysis.
+
 ## List of References:
 
 * [Data Definition Language (DDL)](https://en.wikipedia.org/wiki/Data_definition_language)
